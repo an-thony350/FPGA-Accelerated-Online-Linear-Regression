@@ -2,7 +2,7 @@
 
 Public technical dossier for the RTL hardware-acceleration part of a real-time FPGA crypto market-data project.
 
-> This repository documents the FPGA accelerator architecture and validation approach only. The original source, bitstreams, credentials, notebooks, and trading/API code are not published. This is an engineering portfolio project, not financial advice or a deployable trading system.
+> This repository documents the FPGA accelerator architecture and validation approach only. The original source, bitstreams, credentials, notebooks, and trading/API code are not published due to university plaigarism rules. 
 
 ## Overview
 
@@ -59,16 +59,6 @@ flowchart TD
 | On-chip power | Approx. 2.135 W |
 | Timing estimate / target | 5.84 ns / 8 ns |
 
-## Public Evidence
-
-| Topic | Document |
-|---|---|
-| Accelerator architecture | [`docs/rtl-accelerator.md`](docs/rtl-accelerator.md) |
-| Numeric format and packing | [`docs/fixed-point-and-bus.md`](docs/fixed-point-and-bus.md) |
-| PYNQ integration | [`docs/pynq-integration.md`](docs/pynq-integration.md) |
-| Testing and validation | [`docs/testing-and-validation.md`](docs/testing-and-validation.md) |
-| Source policy | [`docs/source-availability.md`](docs/source-availability.md) |
-| GitHub setup | [`docs/github-setup.md`](docs/github-setup.md) |
 
 ## Technology
 
@@ -80,12 +70,4 @@ flowchart TD
 - PYNQ-Z1 / Zynq-7000
 - Python/PYNQ MMIO integration
 - NumPy reference models
-
-## Application Context
-
-The accelerator was integrated into a larger system that streamed Binance market data, computed microstructure features, trained a short-horizon linear model, and evaluated predictions through paper trading. This public repo focuses only on the hardware acceleration layer.
-
-## Safety Boundary
-
-The original archive contains sensitive and non-public material, including credential-like files and bitstreams. This public repository intentionally excludes all implementation source and deployable trading components.
 

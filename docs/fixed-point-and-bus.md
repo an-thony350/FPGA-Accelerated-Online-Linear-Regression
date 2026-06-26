@@ -4,7 +4,7 @@ The accelerator uses FPGA-friendly numeric representations and wide input packin
 
 ## Numeric Representation
 
-The final design converted floating-point feature values in software before passing them to the FPGA. The report describes:
+The final design converted floating-point feature values in software before passing them to the FPGA.
 
 | Item | Choice |
 |---|---|
@@ -15,15 +15,6 @@ The final design converted floating-point feature values in software before pass
 | Reported quantisation | Worst-case approx. 1.25% relative error |
 
 The 64-bit accumulator is intentionally wider than the single-product width because accumulation over thousands of samples requires substantially more range.
-
-## Earlier Fixed-Point Prototype
-
-The project also explored an HLS-style fixed-point design with:
-
-- `ap_fixed<18,13>` feature values,
-- `ap_fixed<64,40>` accumulators.
-
-The final public claim is kept broader because the report says the later design moved toward a Vivado/SystemVerilog implementation with software-side conversion and 64-bit accumulation.
 
 ## 512-Bit Sample Packing
 
@@ -37,8 +28,6 @@ Each memory word carries a complete sample. This means the hardware can unpack t
 ├── ...
 └── feature_n
 ```
-
-The report attributes approximately 90 us of DMA/register setup overhead to this packed transfer path.
 
 ## Design Tradeoff
 
